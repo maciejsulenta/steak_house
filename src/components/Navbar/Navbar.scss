@@ -23,7 +23,7 @@
     &--left {
       flex: 4;
       display: flex;
-      align-items: center;  
+      align-items: center;
       gap: 4em;
     }
 
@@ -205,7 +205,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: top 0.4s ease-in-out, clip-path 0.8s ease-in-out;
+  transition: top 0.6s ease-in-out, clip-path 0.6s ease-in-out 0.1s;
 
 
   &--active {
