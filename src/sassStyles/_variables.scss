@@ -2,10 +2,20 @@
 $screen-small: 567px;
 $screen-medium: 768px;
 $screen-large: 992px;
-$screen-xl: 1200px;
+$screen-xl: 1280px;
 $screen-xxl: 1600px;
 
 //colors
-$buttonRed: #920303;
-$bgcWhite: #444;
-$fontBlack: #000;
+$brown: #920303;
+$white: #fff;
+$black: #000;
+$bodyDarkMode: #444;
+$whiteHover: #bbb;
+$brownHover: #490000;
+
+//fonts
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url("../assets/fonts/sofiapro.otf") format('opentype');
+}
+$sofia: 'Sofia Pro', sans-serif;
