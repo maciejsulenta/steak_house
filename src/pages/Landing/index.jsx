@@ -1,9 +1,10 @@
 import React from "react";
+import "./Landing.scss";
 import Navbar from "../../components/Navbar";
 
 const Landing = () => {
   return (
-    <div className="siema">
+    <div className="landing">
       <Navbar />
     </div>
   );
