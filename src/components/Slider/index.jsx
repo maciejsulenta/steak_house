@@ -7,8 +7,8 @@ import "swiper/scss/pagination";
 import "swiper/scss/effect-cube";
 import Button from "../../components/Button";
 import { slidesData } from "../../assets/data/slidesData";
-SwiperCore.use([Pagination, Autoplay]);
 
+SwiperCore.use([Pagination, Autoplay]);
 const Slider = () => {
   const [slides, setSlides] = useState([]);
 

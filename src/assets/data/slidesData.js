@@ -12,13 +12,13 @@ export const slidesData = [
   {
     id: 2,
     title: "<span>Zaskakujący</span> smak naszych przystawek!",
-    text: "Już na wstępie znienacka bombarduje wyostrzone podczas konsumpcji zmysły, aby za chwilę nieść beztroskie wspomnienia kojąc w smakach naszego dzieciństwa.",
+    text: "Już na wstępie znienacka bombarduje wyostrzone podczas konsumpcji zmysły, aby za chwilę nieść beztroskie wspomnienia.",
     img: slideSecond,
   },
   {
     id: 3,
-    title: "<span>Sprawdź</span> nowości w naszym menu!",
-    text: "Wyrafinowane i dopracowane w każdym calu menu przenosi gości w podróż kulinarną jednocześnie zadowalając najbardziej wymagających smakoszy. ",
+    title: "<span>Sprawdź</span> nowości naszego menu!",
+    text: "Wyrafinowane i dopracowane w każdym calu menu przenosi gości w podróż kulinarną. ",
     img: slideThird,
   },
 ];
