@@ -12,6 +12,8 @@ $black: #000;
 $bodyDarkMode: #444;
 $whiteHover: #bbb;
 $brownHover: #490000;
+$sliderBullet: #efefef;
+$sliderMobileBg: rgba(255, 255, 255, 0.8);
 
 //font sizes
 $fSmall: 0.7em;
@@ -24,4 +26,6 @@ $fHuge: 2.7em;
     font-family: 'Sofia Pro';
     src: url("../assets/fonts/sofiapro.otf") format('opentype');
 }
-$sofia: 'Sofia Pro', sans-serif;
+
+$sofia: 'Sofia Pro',
+sans-serif;

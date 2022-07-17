@@ -1,0 +1,152 @@
+@use '../../sassStyles/variables';
+@use '../../sassStyles/mixins';
+
+.swiper {
+    height: calc(100vh - 80px);
+    margin: 0;
+    padding: 0;
+
+    @include mixins.mediumMinBreakPoint {
+        height: 31em;
+    }
+
+    &-wrapper {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &-slide {
+        display: flex;
+        flex-direction: column;
+
+        @include mixins.mediumMinBreakPoint {
+            flex-direction: row;
+        }
+    }
+
+    &-slide img {
+        width: 100%;
+        height: 100%;
+        flex: 1;
+        position: absolute;
+        object-fit: cover;
+
+        @include mixins.mediumMinBreakPoint {
+            width: 50%;
+            height: 31em;
+            position: relative;
+        }
+    }
+
+    &-pagination {
+        width: fit-content !important;
+        height: fit-content !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+
+        @include mixins.mediumMinBreakPoint {
+            top: 25.3em;
+            left: 5% !important;
+            transform: translateX(0) !important;
+        }
+
+        @include mixins.xlMinBreakPoint {
+            left: 7.5% !important;
+        }
+    }
+
+    &-pagination-bullet {
+        width: 8px !important;
+        height: 8px !important;
+        font-size: 20px !important;
+    }
+
+    &-pagination-bullet:nth-child(2) {
+        margin: 0 1em !important;
+    }
+
+    &-pagination-bullet-active {
+        width: 9px !important;
+        height: 9px !important;
+        border: 2px solid variables.$white;
+        background-color: transparent !important;
+
+        @include mixins.mediumMinBreakPoint {
+            border: 2px solid variables.$black;
+        }
+    }
+}
+
+.slide-content {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+    @include mixins.mediumMinBreakPoint {
+        width: 50%;
+        position: relative;
+        top: 5.3em;
+        left: 5%;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    @include mixins.xlMinBreakPoint {
+        left: 7.5%;
+    }
+
+    &__wrapper {
+        padding: 2em;
+        transform: translateY(-5em);
+        border-radius: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: variables.$sliderMobileBg;
+
+        @include mixins.mediumMinBreakPoint {
+            padding: 0;
+            transform: translateY(0);
+            text-align: left;
+            align-items: flex-start;
+            background-color: transparent;
+        }
+    }
+
+    &__title {
+        width: 6em;
+        font-size: 5em;
+        font-weight: 700;
+        line-height: 1.16em;
+        margin: 0;
+
+        @include mixins.mediumMinBreakPoint {
+            width: 10.2em;
+            font-size: 2.8em;
+        }
+
+        span {
+            padding: 0 0.1em;
+            background-color: variables.$black;
+            color: variables.$white;
+        }
+    }
+
+    &__text {
+        width: 13em;
+        font-size: 2.5em;
+        font-weight: 300;
+        line-height: 1.25em;
+        margin: 1.4em 0 1.8em 0;
+
+        @include mixins.mediumMinBreakPoint {
+            width: 20em;
+            font-size: 1em;
+        }
+    }
+}
