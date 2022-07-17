@@ -1,0 +1,23 @@
+@use '../../sassStyles/variables';
+@use '../../sassStyles/mixins';
+
+.styled-button {
+    font-size: 1.7em;
+    width: 14.5em;
+    height: 3.5em;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    background-color: variables.$brown;
+    color: variables.$white;
+    font-weight: 400;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: variables.$brownHover;
+    }
+
+    @include mixins.mediumMinBreakPoint {
+        font-size: 0.7em;
+    }
+}

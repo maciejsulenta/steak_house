@@ -2,10 +2,13 @@
 
 * {
     box-sizing: border-box;
+    font-family: variables.$sofia;
 }
 
 body {
     margin: 0;
     padding: 0;
-    background-color: variables.$bodyDarkMode;
+
+    // background-color: variables.$bodyDarkMode;
+
 }
