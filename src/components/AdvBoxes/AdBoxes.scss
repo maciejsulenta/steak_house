@@ -1,0 +1,110 @@
+@use '../../sassStyles/variables';
+@use '../../sassStyles/mixins';
+
+.boxes-wrapper {
+    width: 100%;
+    height: fit-content;
+    padding: 0 1.8em 4.5em 1.8em;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: minmax(260px, 95%);
+    grid-template-rows: repeat(1fr);
+    justify-content: center;
+
+    @include mixins.mediumMinBreakPoint {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8em;
+    }
+}
+
+.box-adv {
+    height: 35em;
+    position: relative;
+    border-radius: 0.5em;
+    color: variables.$white;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease;
+
+    @include mixins.mediumMinBreakPoint {
+        height: 20.75em;
+    }
+
+    &:hover>#image {
+        transform: scale(1.1);
+    }
+
+    &__wrapper {
+        padding: 8%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include mixins.mediumMinBreakPoint {
+            padding: 8% 0 0 11.7%;
+            display: block;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        border-radius: 0.5em;
+        z-index: -1;
+        transition: all 0.3s ease;
+    }
+
+    &__title {
+        font-size: 3.2em;
+        font-weight: 700;
+        line-height: 0.914em;
+        text-align: center;
+
+        @include mixins.mediumMinBreakPoint {
+            font-size: 1.75em;
+            text-align: left;
+        }
+    }
+
+    &__text {
+        width: 20em;
+        font-size: 2em;
+        font-weight: 400;
+        line-height: 1.6em;
+        text-align: center;
+        margin: 1.8em 0 1.6em 0;
+
+        @include mixins.mediumMinBreakPoint {
+            font-size: 1em;
+            text-align: left;
+        }
+
+        span {
+            background-color: variables.$black;
+            padding: 0 0.1em;
+        }
+
+        section {
+            display: inline;
+            background-color: variables.$brown;
+        }
+    }
+
+    &__icons {
+        display: flex;
+        gap: .7em;
+        margin: -0.5em 0 .5em 0;
+
+        img {
+            transition: all 0.1s ease;
+
+            &:hover {
+                transform: scale(1.1);
+                filter: brightness(120%);
+            }
+        }
+    }
+
+}
