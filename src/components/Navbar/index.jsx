@@ -9,6 +9,10 @@ const Navbar = () => {
   const [isOpen, setisOpen] = useState(false);
   const setIsOpenHandler = () => {
     setisOpen(!isOpen);
+
+    isOpen
+      ? document.body.classList.remove("no-scroll")
+      : document.body.classList.add("no-scroll");
   };
 
   return (
