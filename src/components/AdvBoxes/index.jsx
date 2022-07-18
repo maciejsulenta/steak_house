@@ -32,7 +32,6 @@ const AdvBoxes = () => {
                 ))}
               </div>
             )}
-
             <Button />
           </div>
         </div>
