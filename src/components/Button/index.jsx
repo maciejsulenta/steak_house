@@ -2,7 +2,7 @@ import React from "react";
 import "./Button.scss";
 
 const Button = () => {
-  return <button className="styled-button">Zamów online</button>;
+  return <a className="styled-button" href="/">Zamów online</a>;
 };
 
 export default Button;
