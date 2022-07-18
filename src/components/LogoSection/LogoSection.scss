@@ -1,0 +1,58 @@
+@use '../../sassStyles/variables';
+@use '../../sassStyles/mixins';
+@use '../../sassStyles/animations';
+
+.logo-section {
+    width: 100%;
+    height: 4.1em;
+    overflow: hidden;
+
+    @include mixins.mediumMinBreakPoint {
+        padding: 0 5em;
+    }
+
+    @include mixins.xlMinBreakPoint {
+        padding: 0 18.4em;
+    }
+
+    &__wrapper {
+        width: 250%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include mixins.mediumMinBreakPoint {
+            width: 100%;
+        }
+    }
+}
+
+.image {
+    position: absolute;
+
+    @include animations.keyframes(logoSection-scroll) {
+        from {
+            left: calc(-200px);
+        }
+
+        to {
+            left: 100%;
+        }
+    }
+
+    @include animations.animate(logoSection-scroll, 10s, linear, infinite, both);
+
+    @for $x from 2 through variables.$logoNumber {
+        &:nth-child(#{$x}) {
+            animation-delay: 2s * ($x - 1);
+        }
+    }
+
+    @include mixins.mediumMinBreakPoint {
+        animation: none;
+        position: relative;
+    }
+}
