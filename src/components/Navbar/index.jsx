@@ -85,7 +85,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-
       <div
         className={isOpen ? "mobile-menu mobile-menu--active" : "mobile-menu"}
       >
